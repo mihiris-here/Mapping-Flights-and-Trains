@@ -1,5 +1,3 @@
----
-
 # Wikipedia Transport Hub Crawler – Database Documentation
 
 ## Overview
@@ -11,8 +9,6 @@ It supports:
 * Operators (airlines, rail operators, metro authorities)
 * Multi-stop services (e.g., Boston → NYC → DC)
 * Routes for air, rail, and metro
-
----
 
 ## **1. Transport\_Hubs**
 
