@@ -98,7 +98,3 @@ If you need direct origin–destination pairs for mapping or analysis, this can 
 * **Operators** are linked to **Service\_Lines** via `operator_id`.
 * **Service\_Lines** are linked to **Service\_Stops** to record the full stop sequence.
 * **Routes** (optional) can be derived for direct connections between stops.
-
----
-
-Do you want me to also make a **visual ER diagram** for this so you can see exactly how all these link together? That would make it much easier to follow in one glance.
