@@ -5,7 +5,7 @@ CREATE DATABASE transport_hub_crawler;
 \c transport_hub_crawler;
 
 -- ============================
--- Table: Transport_Hubs
+-- Table 1: Transport_Hubs
 -- ============================
 CREATE TABLE Transport_Hubs (
     hub_id SERIAL PRIMARY KEY,
@@ -21,7 +21,7 @@ CREATE TABLE Transport_Hubs (
 );
 
 -- ============================
--- Table: Operators
+-- Table 2: Operators
 -- ============================
 CREATE TABLE Operators (
     operator_id SERIAL PRIMARY KEY,
@@ -34,7 +34,7 @@ CREATE TABLE Operators (
 );
 
 -- ============================
--- Table: Service_Lines
+-- Table 3: Service_Lines
 -- ============================
 CREATE TABLE Service_Lines (
     service_id SERIAL PRIMARY KEY,
@@ -46,19 +46,17 @@ CREATE TABLE Service_Lines (
 );
 
 -- ============================
--- Table: Service_Stops
+-- Table 4: Service_Stops
 -- ============================
 CREATE TABLE Service_Stops (
     service_id INT NOT NULL REFERENCES Service_Lines(service_id) ON DELETE CASCADE,
     stop_order INT NOT NULL,
     hub_id INT NOT NULL REFERENCES Transport_Hubs(hub_id) ON DELETE CASCADE,
-    arrival_time TEXT,
-    departure_time TEXT,
     PRIMARY KEY (service_id, stop_order)
 );
 
 -- ============================
--- Optional Derived Table: Routes
+-- Table 5: Routes
 -- ============================
 CREATE TABLE Routes (
     origin_id INT NOT NULL REFERENCES Transport_Hubs(hub_id) ON DELETE CASCADE,

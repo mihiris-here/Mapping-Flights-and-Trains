@@ -69,12 +69,11 @@ Lists all stops for a service in travel order.
 | `service_id`     | INTEGER | References `Service_Lines.service_id`       |
 | `stop_order`     | INTEGER | Order of stop in route (1 = starting point) |
 | `hub_id`         | INTEGER | References `Transport_Hubs.hub_id`          |
-| `arrival_time`   | TEXT    | Scheduled/typical arrival time (optional)   |
-| `departure_time` | TEXT    | Scheduled/typical departure time (optional) |
+
 
 ---
 
-## **5. Routes (Optional – Derived Table)**
+## **5. Routes **
 
 If you need direct origin–destination pairs for mapping or analysis, this can be **generated** from `Service_Stops`.
 
@@ -93,4 +92,4 @@ If you need direct origin–destination pairs for mapping or analysis, this can 
 * **Transport\_Hubs** stores all stations/airports.
 * **Operators** are linked to **Service\_Lines** via `operator_id`.
 * **Service\_Lines** are linked to **Service\_Stops** to record the full stop sequence.
-* **Routes** (optional) can be derived for direct connections between stops.
+* **Routes** can be derived for direct connections between stops.
