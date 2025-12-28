@@ -1,5 +1,5 @@
 -- ============================
--- Create Database (optional)
+-- Create Database
 -- ============================
 CREATE DATABASE transport_hub_crawler;
 \c transport_hub_crawler;
